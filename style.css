@@ -1,0 +1,269 @@
+* {
+  margin: 0;
+  padding: 0;
+  /* box-sizing: border-box; */
+}
+
+body {
+  overflow-x: hidden;
+  min-height: 100vh;
+}
+
+.main {
+  display: grid;
+}
+
+.header-container {
+  position: sticky;
+  top: 0;
+  display: flex;
+  justify-content: center;
+}
+
+header {
+  position: absolute;
+  width: 100vw;
+  display: flex;
+  justify-content: center;
+}
+
+.line {
+  position: absolute;
+  height: 30px;
+  border-left: 1px solid black;
+  text-align: center;
+}
+
+.header-text {
+  padding-top: 40px;
+  font-family: 'Inter', sans-serif;
+  color: rgb(83, 83, 83);
+  text-align: center;
+}
+
+/* content line */
+
+.container {
+  position: sticky;
+  top: 0;
+  left: 83vw;
+  z-index: 100;
+  height: 100vh;
+  width: 10vw;
+}
+.container-child {
+  height: 100vh;
+  width: 20vw;
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  opacity: 0;
+}
+
+.content-line1 {
+  position: absolute;
+  top: 0;
+  height: 20vh;
+  padding-right: 150px;
+  border-left: 1.5px solid black;
+}
+
+.content-number {
+  position: absolute;
+  height: 20vh;
+  padding-right: 150px;
+}
+
+.top-number {
+  position: absolute;
+  top: 10px;
+}
+
+.bot-number {
+  position: absolute;
+  top: 70px;
+}
+
+.middle-line {
+  position: absolute;
+  top: 30px;
+  left: 3px;
+  height: 40px;
+  rotate: 55deg;
+  border-left: 1px solid black;
+}
+
+.content-line2 {
+  position: absolute;
+  bottom: 0;
+  height: 20vh;
+  padding-right: 150px;
+  border-left: 1.5px solid black;
+}
+
+.header-text span {
+  font-family: 'Libre Baskerville', serif;
+  color: rgb(83, 83, 83);
+  /* font-family: ; */
+}
+
+.intro-section {
+  position: absolute;
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+#background {
+  z-index: -1;
+}
+
+#mbs {
+  top: 220px;
+}
+
+#grow-plants {
+  top: 400px;
+}
+
+.intro-section img {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  pointer-events: none;
+  object-fit: cover;
+}
+
+#main-header {
+  padding-left: 50px;
+  color: rgb(83, 83, 83);
+  top: 100px;
+  /* left: 800px; */
+  position: absolute;
+  font-family: 'Inter', sans-serif;
+  text-align: center;
+  font-size: 13vh;
+  /* z-index: 100; */
+}
+
+/* Works style */
+
+.work-sections {
+  width: 100%;
+  height: 825px;
+  display: flex;
+  /* justify-content: center; */
+  align-items: center;
+  position: relative;
+  background-color: white;
+}
+
+.works-header-line1, .works-header-line2, .works-header-line3 {
+  color: rgb(54, 54, 54);
+  font-size: 6em;
+  padding-left: 150px;
+  line-height: .9em;
+  font-family: 'Inter', sans-serif;
+  transform: translateX(-100%);
+  transition: transform 0.8s ease;
+  /* z-index: -10; */
+}
+
+.section-works-header{
+  position: absolute;
+  z-index: 10;
+}
+
+.section-works-images {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.img-collection {
+  position: absolute;
+  width: 50vw;
+  left: 500px;
+  transform: translateX(200%);
+  transition: transform 0.8s ease;
+}
+
+.section-works-images .img-collection img {
+  height: 60vh;
+  width: 50vw;
+  object-fit: cover;
+}
+
+.show {
+  transform: translateX(0%);
+  transition: transform 0.8s ease;
+}
+
+.slideshow-container {
+  position: relative;
+}
+
+.mySlides {
+  display: none;
+}
+
+.prev, .next {
+  cursor: pointer;
+  position: absolute;
+  top: 50%;
+  width: auto;
+  margin-top: -22px;
+  padding: 16px;
+  color: white;
+  font-weight: bold;
+  font-size: 18px;
+  transition: 0.6s ease;
+  border-radius: 0 3px 3px 0;
+  user-select: none;
+}
+
+.next {
+  right: 0;
+  border-radius: 3px 0 0 3px;
+}
+
+/* On hover, add a black background color with a little bit see-through */
+.prev:hover, .next:hover {
+  background-color: rgba(0,0,0,0.8);
+}
+
+.dots {
+  position: absolute;
+  right: 0;
+}
+
+/* The dots/bullets/indicators */
+.dot {
+  cursor: pointer;
+  height: 10px;
+  width: 10px;
+  margin: 0 2px;
+  background-color: #bbb;
+  border-radius: 50%;
+  display: inline-block;
+  transition: background-color 0.6s ease;
+}
+
+.active, .dot:hover {
+  background-color: #717171;
+}
+
+/* Fading animation */
+.fade {
+  animation-name: fade;
+  animation-duration: 1.5s;
+}
+
+@keyframes fade {
+  from {opacity: .4}
+  to {opacity: 1}
+}
