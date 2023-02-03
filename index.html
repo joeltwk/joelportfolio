@@ -7,10 +7,22 @@
   <link rel="stylesheet" href="style.css">
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@600;700&display=swap" rel="stylesheet">
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@600;700&family=Libre+Baskerville:ital@1&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@200&display=swap" rel="stylesheet">
   <title>Joel's Portfolio</title>
 </head>
 <body>
   <div class="main">
+    <div class="about-page-container">
+      <div class="about-page-wrapper">
+        <div class="about-page"></div>
+        <div class="about-text-wrapper">
+          <div class="about-page-text">
+            <h3 class="white-text">About me</h3>
+            <p class="white-text">Hi, I'm Joel Tang, a designer and web developer. I'm passionate about all things visual and tech related and wants to continue to hone my skills in those fields. Outside of that, I'm generally a very curious person who spends quite a bit of time on reddit reading about anything random.</p>
+          </div>
+        </div>
+      </div>
+    </div>
     <div class="header-container">
       <div class="line"></div>
       <header>
@@ -30,6 +42,14 @@
           </span>
         </h4>
       </header>
+    </div>
+    <div class="about-container">
+      <div class="about-title">
+        <div>
+          <h4 class="about-text" onclick="showAbout()">About</h4>
+          <h4 class="back-text hidden" onclick="hideAbout()">Back</h4>
+        </div>
+      </div>
     </div>
     <div class="container">
       <div class="container-child">

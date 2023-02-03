@@ -13,6 +13,7 @@ let rightPlants = document.getElementById('right-plants');
 let growPlants = document.getElementById('grow-plants');
 let headerContainer = document.querySelector('.header-container');
 let lineContainer = document.querySelector('.container-child');
+let aboutText = document.querySelector('.about-text');
 
 window.addEventListener('scroll', ()=> {
   let value = window.scrollY;
@@ -34,6 +35,7 @@ window.addEventListener('scroll', ()=> {
   rightPlants.style.left = value * 0.2 + 'px';
   headerContainer.style.opacity = 1 - value * 0.05;
   lineContainer.style.opacity = 0 + value * 0.0009;
+  aboutText.style.opacity = 0 + value * 0.0009;
 });
 
 // content line
@@ -126,4 +128,22 @@ function showSlides(n, no) {
     dots[i].className = dots[i].className.replace(" active", "");
   }
   dots[slideIndex[no]-1].className += " active";
+}
+
+// about page
+
+const aboutPage = document.querySelector('.about-page-container')
+const aboutBtn = document.querySelector('.about-text')
+const backBtn = document.querySelector('.back-text')
+
+function showAbout() {
+  aboutPage.classList.add('about-show')
+  aboutBtn.classList.add('hidden')
+  backBtn.classList.remove('hidden')
+}
+
+function hideAbout() {
+  aboutPage.classList.remove('about-show')
+  aboutBtn.classList.remove('hidden')
+  backBtn.classList.add('hidden')
 }
